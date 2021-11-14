@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Panchayat Election</string>
+
+    <string name="app_id">ca-app-pub-7920815986886474~4050074078</string>
+
+    <string name="app_open">ca-app-pub-7920815986886474/8551236492</string>
+    <string name="banner_id">ca-app-pub-7920815986886474/9352154608</string>
+    <string name="fullscreen">ca-app-pub-7920815986886474/1247461547</string>
+    <string name="native_id">ca-app-pub-7920815986886474/1777944585</string>
+
+    <string name="panchayat">Panchayat</string>
+
+    <string name="election_updates">Get All Election Updates Right Here.</string>
+
+    <string name="voter_id_card">Voter ID Card</string>
+    <string name="change_language">Change Language</string>
+    <string name="share_me">Share Me</string>
+    <string name="other_apps">Other Apps</string>
+    <string name="exit">Exit</string>
+
+    <string name="home_page">Home Page</string>
+    <string name="know_your_booth">Know Your Booth</string>
+    <string name="electoral_roll_pdf">Electoral Roll PDF</string>
+    <string name="search_electoral_roll">Search Electoral Roll</string>
+    <string name="panchayat_voter_list">Panchayat Voter List</string>
+    <string name="photo">Photo Gallery</string>
+    <string name="contesting_candidates">Previous Candidates</string>
+    <string name="nomination">Nomination 2021</string>
+    <string name="candidates">Candidates 2021</string>
+    <string name="vote_count">Vote Count</string>
+
+    <string name="back_to">Back to Home Page</string>
+
+    <string name="apply_online">Apply Online</string>
+    <string name="download_voter_id">Download Voter ID</string>
+    <string name="edit_voter_card">Edit Voter Card</string>
+    <string name="voter_track">Voter Track</string>
+    <string name="voter_reprint">Voter Reprint</string>
+    <string name="voter_services">Voter Services</string>
+    <string name="search_voter">Search Voter</string>
+
+
+</resources>
