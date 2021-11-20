@@ -8,7 +8,33 @@
     android:background="#ECECEC"
     tools:context=".Fragments.VoterFragment">
 
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_background"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp">
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="80dp"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/app_name"
+            android:textColor="#ffffff"
+            android:textSize="28sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </RelativeLayout>
+
+
     <ScrollView
+        android:layout_below="@id/relative"
+        android:layout_above="@id/btnHome"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -17,191 +43,164 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
-            <RelativeLayout
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:orientation="vertical"
+                android:layout_marginTop="5dp">
 
-                <ImageView
-                    android:id="@+id/imgTop"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:scaleType="fitXY"
-                    app:srcCompat="@drawable/top_background" />
-
-
-                <TextView
-                    android:id="@+id/txtName"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="80dp"
-                    android:fontFamily="sans-serif-black"
-                    android:text="@string/app_name"
-                    android:textColor="#ffffff"
-                    android:textSize="28sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-
-                <LinearLayout
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/voterApply"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginEnd="24dp"
-                    android:orientation="vertical"
-                    android:layout_marginTop="5dp"
-                    android:layout_below="@id/imgTop">
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/background_btn"
+                    android:drawableStart="@drawable/ic_2"
+                    android:drawablePadding="20dp"
+                    android:elevation="3dp"
+                    android:paddingStart="20dp"
+                    android:text="@string/apply_online"
+                    android:textAlignment="viewStart"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/voterApply"
-                        android:layout_width="match_parent"
-                        android:layout_height="60dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:background="@drawable/background_btn"
-                        android:drawableStart="@drawable/ic_2"
-                        android:drawablePadding="20dp"
-                        android:elevation="3dp"
-                        android:paddingStart="20dp"
-                        android:text="@string/apply_online"
-                        android:textAlignment="viewStart"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/voterDownload"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/background_btn"
+                    android:drawableStart="@drawable/ic_2"
+                    android:drawablePadding="20dp"
+                    android:elevation="3dp"
+                    android:paddingStart="20dp"
+                    android:text="@string/download_voter_id"
+                    android:textAlignment="viewStart"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/voterDownload"
-                        android:layout_width="match_parent"
-                        android:layout_height="60dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:background="@drawable/background_btn"
-                        android:drawableStart="@drawable/ic_2"
-                        android:drawablePadding="20dp"
-                        android:elevation="3dp"
-                        android:paddingStart="20dp"
-                        android:text="@string/download_voter_id"
-                        android:textAlignment="viewStart"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                <include
+                    android:id="@+id/admob_native_container"
+                    layout="@layout/admob_native_medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:elevation="3dp"
+                    android:paddingStart="20dp"
+                    android:visibility="gone"/>
 
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/voterEdit"
-                        android:layout_width="match_parent"
-                        android:layout_height="60dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:background="@drawable/background_btn"
-                        android:drawableStart="@drawable/ic_2"
-                        android:drawablePadding="20dp"
-                        android:elevation="3dp"
-                        android:paddingStart="20dp"
-                        android:text="@string/edit_voter_card"
-                        android:textAlignment="viewStart"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/voterEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/background_btn"
+                    android:drawableStart="@drawable/ic_2"
+                    android:drawablePadding="20dp"
+                    android:elevation="3dp"
+                    android:paddingStart="20dp"
+                    android:text="@string/edit_voter_card"
+                    android:textAlignment="viewStart"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
-                    <include
-                        android:id="@+id/admob_native_container"
-                        layout="@layout/admob_native_medium"
-                        android:layout_width="match_parent"
-                        android:layout_height="200dp"
-                        android:elevation="3dp"
-                        android:paddingStart="20dp"
-                        android:visibility="gone"/>
 
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/voterSearch"
-                        android:layout_width="match_parent"
-                        android:layout_height="60dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:background="@drawable/background_btn"
-                        android:drawableStart="@drawable/ic_2"
-                        android:paddingEnd="20dp"
-                        android:drawablePadding="20dp"
-                        android:elevation="3dp"
-                        android:paddingStart="20dp"
-                        android:text="@string/search_voter"
-                        android:textAlignment="viewStart"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
 
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/voterTrack"
-                        android:layout_width="match_parent"
-                        android:layout_height="60dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:background="@drawable/background_btn"
-                        android:drawableStart="@drawable/ic_2"
-                        android:paddingEnd="20dp"
-                        android:drawablePadding="20dp"
-                        android:elevation="3dp"
-                        android:paddingStart="20dp"
-                        android:text="@string/voter_track"
-                        android:textAlignment="viewStart"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/voterSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/background_btn"
+                    android:drawableStart="@drawable/ic_2"
+                    android:paddingEnd="20dp"
+                    android:drawablePadding="20dp"
+                    android:elevation="3dp"
+                    android:paddingStart="20dp"
+                    android:text="@string/search_voter"
+                    android:textAlignment="viewStart"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/voterReprint"
-                        android:layout_width="match_parent"
-                        android:layout_height="60dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:background="@drawable/background_btn"
-                        android:drawableStart="@drawable/ic_2"
-                        android:drawablePadding="20dp"
-                        android:elevation="3dp"
-                        android:paddingStart="20dp"
-                        android:text="@string/voter_reprint"
-                        android:textAlignment="viewStart"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/voterTrack"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/background_btn"
+                    android:drawableStart="@drawable/ic_2"
+                    android:paddingEnd="20dp"
+                    android:drawablePadding="20dp"
+                    android:elevation="3dp"
+                    android:paddingStart="20dp"
+                    android:text="@string/voter_track"
+                    android:textAlignment="viewStart"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/voterServices"
-                        android:layout_width="match_parent"
-                        android:layout_height="60dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:background="@drawable/background_btn"
-                        android:drawableStart="@drawable/ic_2"
-                        android:drawablePadding="20dp"
-                        android:elevation="3dp"
-                        android:paddingStart="20dp"
-                        android:text="@string/voter_services"
-                        android:textAlignment="viewStart"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/voterReprint"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/background_btn"
+                    android:drawableStart="@drawable/ic_2"
+                    android:drawablePadding="20dp"
+                    android:elevation="3dp"
+                    android:paddingStart="20dp"
+                    android:text="@string/voter_reprint"
+                    android:textAlignment="viewStart"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/btnHome"
-                        android:layout_width="match_parent"
-                        android:layout_height="55dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:background="@drawable/background_blue"
-                        android:drawableStart="@drawable/ic_2"
-                        android:drawableEnd="@drawable/ic_2"
-                        android:drawablePadding="20dp"
-                        android:elevation="3dp"
-                        android:paddingStart="20dp"
-                        android:paddingEnd="20dp"
-                        android:text="@string/back_to"
-                        android:textColor="#ffffff"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/voterServices"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/background_btn"
+                    android:drawableStart="@drawable/ic_2"
+                    android:drawablePadding="20dp"
+                    android:elevation="3dp"
+                    android:paddingStart="20dp"
+                    android:text="@string/voter_services"
+                    android:textAlignment="viewStart"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
-                </LinearLayout>
 
-            </RelativeLayout>
+            </LinearLayout>
 
         </LinearLayout>
 
     </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnHome"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/background_blue"
+        android:drawableStart="@drawable/ic_2"
+        android:drawableEnd="@drawable/ic_2"
+        android:drawablePadding="20dp"
+        android:elevation="3dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/back_to"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>
