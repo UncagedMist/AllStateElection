@@ -9,8 +9,8 @@ android {
         applicationId "tbc.uncagedmist.allstateelection"
         minSdk 21
         targetSdk 31
-        versionCode 6
-        versionName "0.0.6"
+        versionCode 9
+        versionName "0.0.9"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -43,17 +43,17 @@ android {
 
 dependencies {
 
-    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'androidx.appcompat:appcompat:1.4.0'
     implementation 'com.google.android.material:material:1.4.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     implementation 'com.google.android.play:core:1.10.2'
-    implementation 'com.google.android.gms:play-services-ads:20.4.0'
-    implementation 'com.google.ads.mediation:facebook:6.7.0.0'
+    implementation 'com.google.android.gms:play-services-ads:20.5.0'
+    implementation 'com.google.ads.mediation:facebook:6.8.0.0'
 
 
     implementation 'com.github.Shashank02051997:FancyAlertDialog-Android:0.1'

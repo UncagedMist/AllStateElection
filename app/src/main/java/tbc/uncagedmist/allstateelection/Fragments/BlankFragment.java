@@ -78,7 +78,7 @@ public class BlankFragment extends Fragment {
 
         txtName.setText(Common.CurrentName);
 
-        itemView.findViewById(R.id.imgBack).setOnClickListener(new View.OnClickListener() {
+        itemView.findViewById(R.id.btnHome).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (mInterstitialAd != null) {
