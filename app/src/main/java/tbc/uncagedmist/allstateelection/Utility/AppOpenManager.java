@@ -38,9 +38,7 @@ public class AppOpenManager implements LifecycleObserver, Application.ActivityLi
 
     private long loadTime = 0;
 
-    /**
-     * Constructor
-     */
+    /** Constructor */
     public AppOpenManager(MyApplication myApplication) {
         this.myApplication = myApplication;
         this.myApplication.registerActivityLifecycleCallbacks(this);
@@ -80,9 +78,7 @@ public class AppOpenManager implements LifecycleObserver, Application.ActivityLi
                 AppOpenAd.APP_OPEN_AD_ORIENTATION_PORTRAIT, loadCallback);
     }
 
-    /**
-     * Creates and returns ad request.
-     */
+    /** Creates and returns ad request. */
     private AdRequest getAdRequest() {
         return new AdRequest.Builder().build();
     }
@@ -93,9 +89,7 @@ public class AppOpenManager implements LifecycleObserver, Application.ActivityLi
         return (dateDifference < (numMilliSecondsPerHour * numHours));
     }
 
-    /**
-     * Utility method that checks if ad exists and can be shown.
-     */
+    /** Utility method that checks if ad exists and can be shown. */
     public boolean isAdAvailable() {
         return appOpenAd != null && wasLoadTimeLessThanNHoursAgo(4);
     }
@@ -117,8 +111,7 @@ public class AppOpenManager implements LifecycleObserver, Application.ActivityLi
                         }
 
                         @Override
-                        public void onAdFailedToShowFullScreenContent(AdError adError) {
-                        }
+                        public void onAdFailedToShowFullScreenContent(AdError adError) {}
 
                         @Override
                         public void onAdShowedFullScreenContent() {
@@ -136,8 +129,7 @@ public class AppOpenManager implements LifecycleObserver, Application.ActivityLi
     }
 
     @Override
-    public void onActivityCreated(Activity activity, Bundle savedInstanceState) {
-    }
+    public void onActivityCreated(Activity activity, Bundle savedInstanceState) {}
 
     @Override
     public void onActivityStarted(Activity activity) {
@@ -150,16 +142,13 @@ public class AppOpenManager implements LifecycleObserver, Application.ActivityLi
     }
 
     @Override
-    public void onActivityStopped(Activity activity) {
-    }
+    public void onActivityStopped(Activity activity) {}
 
     @Override
-    public void onActivityPaused(Activity activity) {
-    }
+    public void onActivityPaused(Activity activity) {}
 
     @Override
-    public void onActivitySaveInstanceState(Activity activity, Bundle bundle) {
-    }
+    public void onActivitySaveInstanceState(Activity activity, Bundle bundle) {}
 
     @Override
     public void onActivityDestroyed(Activity activity) {
